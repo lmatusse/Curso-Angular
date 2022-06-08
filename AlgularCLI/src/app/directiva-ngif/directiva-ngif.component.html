@@ -1,0 +1,21 @@
+<div class="principal">
+    <h5>*ngif</h5>
+
+</div>
+<!-- Nao sera exibido nada que estiver nessa div se a variavel cursos estiver vazia-->
+<div *ngIf="cursos.length>0">Lista de curssos</div>
+<div *ngIf="cursos.length==0">Nao existem cursos para serem listados</div>
+<p>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</p>
+<div *ngIf="mostrarCursos">Lista de curssos</div>
+<div *ngIf="!mostrarCursos">Nao existem cursos para serem listados</div>
+
+<div><button (click)="onMostrar()">Mostrar Cursos</button></div>
+<div class="using-hidden">
+    <h5>Usar Hidden com altenativa</h5>
+    <p [hidden]="mostrarCursos"> Lista de cursos aqui</p>
+    <p [hidden]="!mostrarCursos"> Nao temos cursos por mostrar</p>
+    <p>Quantidade de cursos:: {{cursos.length}}</p>
+</div>
+<article class="ngswitch">
+    <h5>ngSwitch</h5>
+</article>
